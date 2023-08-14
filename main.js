@@ -1,5 +1,5 @@
 
-let itaWordList = []; 
+let enWordList = []; 
 
 
 
@@ -8,7 +8,7 @@ let inputTextArea = document.getElementById('input-text');
 let findBtn = document.getElementById('find');
 
 import("./words.en.js").then(({words}) => {
-  itaWordList = words()
+  enWordList = words()
   output.innerHTML = '';
 });
 
@@ -80,7 +80,7 @@ function find() {
     v = v.replaceAll('\\*','.*').replaceAll('\\?','.'); // wildcard
     console.log(v);
     let r = new RegExp('^' + v+ '$', 'i')
-    let words = itaWordList.filter(a=> r.test(a))
+    let words = enWordList.filter(a=> r.test(a))
     output.innerHTML = '';
     words.forEach(w=> addOutputLine(w));
   }, 100)
