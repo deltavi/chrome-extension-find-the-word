@@ -1,7 +1,7 @@
 {
   "name": "Find The Word",
   "description": "Chrome extension to find an English word using wildcards (?,*)",
-  "version": "0.4",
+  "version": "0.5",
   "permissions": [
   ],
   "icons": {
